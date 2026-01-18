@@ -1,11 +1,14 @@
 countEl = document.getElementById("count-el");
 saveEL = document.getElementById("save-el");
 
-count=0
+count = 0;
 
-function increment(){
-    console.log("The button was clicked")
+function increment() {
+  count += 1;
+  countEl.textContent = count;
 }
-function save(){
-     console.log("The button was clicked")
+function save() {
+  saveEL.textContent += count + " - ";
+  count = 0;
+  countEl.textContent = count;
 }
